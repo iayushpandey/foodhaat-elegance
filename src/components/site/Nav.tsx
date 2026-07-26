@@ -21,7 +21,7 @@ export function Nav() {
           <img
             src={logoAsset.url}
             alt="Food Haat"
-            className="h-[2cm] w-[2cm] object-contain"
+            className="h-[3cm] w-[3cm] object-contain"
           />
         </Link>
 
