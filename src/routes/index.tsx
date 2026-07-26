@@ -70,6 +70,8 @@ function Hero() {
         width={1920}
         height={1200}
       />
+      {/* Base darkening ensures WCAG AA contrast on any hero image */}
+      <div className="absolute inset-0 bg-black/50" />
       <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,oklch(0.47_0.09_180/0.35),transparent_55%)]" />
 
@@ -82,11 +84,15 @@ function Hero() {
             </div>
 
             <h1
-              className="animate-fade-up mt-6 font-display text-5xl leading-[1.02] font-medium tracking-tight sm:text-6xl md:text-7xl lg:text-[92px]"
+              className="animate-fade-up mt-6 font-display leading-[1.02] tracking-tight text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.6),0_1px_3px_rgba(0,0,0,0.55)]"
               style={{ animationDelay: "80ms" }}
             >
-              <span className="block">Pure Veg.</span>
-              <span className="block text-gradient-gold">Pure Joy.</span>
+              <span className="block text-6xl font-bold sm:text-7xl md:text-8xl lg:text-[104px]">
+                Pure Veg.
+              </span>
+              <span className="mt-1 block text-5xl font-medium text-white/95 sm:text-6xl md:text-7xl lg:text-[88px] [text-shadow:0_2px_20px_rgba(0,0,0,0.5)]">
+                Pure Joy.
+              </span>
             </h1>
 
             <p
