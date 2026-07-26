@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
+import logoAsset from "@/assets/foodhaat-logo.png.asset.json";
 
 export function Nav() {
   const scrolled = true;
@@ -16,19 +17,14 @@ export function Nav() {
       }`}
     >
       <div className="container-x mx-auto flex h-18 max-w-7xl items-center justify-between py-4">
-        <Link to="/" className="group flex items-center gap-2">
-          <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-[oklch(0.52_0.09_180)] to-[oklch(0.38_0.08_185)] text-primary-foreground shadow-[var(--shadow-elegant)]">
-            <span className="font-display text-lg font-bold">F</span>
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className={`font-display text-xl font-semibold ${scrolled ? "text-foreground" : "text-white"}`}>
-              Food Haat
-            </span>
-            <span className={`text-[10px] uppercase tracking-[0.24em] ${scrolled ? "text-muted-foreground" : "text-white/70"}`}>
-              Pure Veg · Lucknow
-            </span>
-          </span>
+        <Link to="/" className="group flex items-center gap-3">
+          <img
+            src={logoAsset.url}
+            alt="Food Haat"
+            className="h-12 w-12 object-contain md:h-14 md:w-14"
+          />
         </Link>
+
 
         <nav className="hidden items-center gap-10 md:flex">
           {[
