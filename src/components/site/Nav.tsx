@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export function Nav() {
   const scrolled = true;
