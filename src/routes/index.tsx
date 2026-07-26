@@ -13,6 +13,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import heroImg from "@/assets/hero-food.jpg";
+import heroSpread from "@/assets/hero-spread.jpg";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { FloatingActions } from "@/components/site/FloatingActions";
@@ -62,62 +63,77 @@ function Home() {
 
 function Hero() {
   return (
-    <section className="relative isolate min-h-[100svh] w-full overflow-hidden">
-      <img
-        src={heroImg}
-        alt="Signature pure-veg thali at Food Haat"
-        className="absolute inset-0 h-full w-full object-cover animate-ken-burns"
-        width={1920}
-        height={1200}
-      />
-      {/* Base darkening ensures WCAG AA contrast on any hero image */}
-      <div className="absolute inset-0 bg-black/50" />
-      <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,oklch(0.47_0.09_180/0.35),transparent_55%)]" />
+    <section className="relative isolate w-full overflow-hidden bg-white">
+      <div className="grid min-h-[100svh] grid-cols-1 lg:grid-cols-[45fr_55fr]">
+        {/* LEFT — Branding */}
+        <div className="relative flex items-center justify-center bg-white px-6 pt-28 pb-16 sm:px-10 lg:px-16 lg:pt-32 lg:pb-20">
+          {/* Soft decorative blobs */}
+          <div className="pointer-events-none absolute -left-24 top-24 h-72 w-72 rounded-full bg-[oklch(0.52_0.09_180/0.06)] blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-16 left-10 h-64 w-64 rounded-full bg-[oklch(0.82_0.12_82/0.08)] blur-3xl" />
 
-      <div className="relative z-10 flex min-h-[100svh] items-center">
-        <div className="container-x mx-auto max-w-7xl pt-28 pb-20 text-white">
-          <div className="max-w-3xl">
-            <div className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-[0.28em] backdrop-blur">
-              <Leaf className="h-3.5 w-3.5 text-[oklch(0.82_0.12_82)]" />
-              Pure Veg · Gomti Nagar, Lucknow
+          <div className="relative w-full max-w-xl">
+            {/* Location pill */}
+            <div
+              className="animate-fade-up inline-flex items-center gap-2 rounded-full border border-[oklch(0.52_0.09_180/0.25)] bg-white px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.24em] text-[oklch(0.42_0.09_182)] shadow-sm"
+            >
+              <MapPin className="h-3.5 w-3.5" />
+              Gomti Nagar, Lucknow
             </div>
 
+            {/* Restaurant Name */}
             <h1
-              className="animate-fade-up mt-6 font-display leading-[1.02] tracking-tight text-white [text-shadow:0_2px_24px_rgba(0,0,0,0.6),0_1px_3px_rgba(0,0,0,0.55)]"
+              className="animate-fade-up mt-8 font-display leading-[0.95] tracking-tight text-[oklch(0.42_0.09_182)]"
               style={{ animationDelay: "80ms" }}
             >
-              <span className="block text-6xl font-bold sm:text-7xl md:text-8xl lg:text-[104px]">
-                Pure Veg.
-              </span>
-              <span className="mt-1 block text-5xl font-medium text-white/95 sm:text-6xl md:text-7xl lg:text-[88px] [text-shadow:0_2px_20px_rgba(0,0,0,0.5)]">
-                Pure Joy.
+              <span className="block text-[88px] font-semibold sm:text-[112px] lg:text-[128px] xl:text-[148px]">
+                Food Haa
+                <span className="relative inline-block">
+                  t
+                  <Leaf
+                    className="absolute -right-2 -top-2 h-6 w-6 -rotate-12 text-[oklch(0.62_0.16_150)] sm:-right-3 sm:-top-3 sm:h-8 sm:w-8 lg:-right-4 lg:-top-4 lg:h-10 lg:w-10"
+                    strokeWidth={2}
+                  />
+                </span>
               </span>
             </h1>
 
-            <p
-              className="animate-fade-up mt-6 max-w-xl text-lg leading-relaxed text-white/85"
-              style={{ animationDelay: "180ms" }}
+            {/* Slogan with decorative lines */}
+            <div
+              className="animate-fade-up mt-6 flex items-center gap-4"
+              style={{ animationDelay: "160ms" }}
             >
-              Serving delicious Indian, South Indian, Chinese, rolls, shakes and
-              continental favourites in the heart of Gomti Nagar — freshly cooked,
-              hygienically served, thoughtfully priced.
+              <span className="h-px w-8 bg-[oklch(0.52_0.09_180/0.4)]" />
+              <span className="text-xs font-semibold uppercase tracking-[0.42em] text-[oklch(0.42_0.09_182)] sm:text-sm">
+                Pure Veg <Leaf className="mx-1 inline h-3.5 w-3.5 text-[oklch(0.62_0.16_150)]" /> Pure Joy
+              </span>
+              <span className="h-px flex-1 bg-[oklch(0.52_0.09_180/0.4)]" />
+            </div>
+
+            {/* Description */}
+            <p
+              className="animate-fade-up mt-7 max-w-[600px] text-base sm:text-[17px]"
+              style={{ animationDelay: "240ms", color: "#444", lineHeight: 1.8 }}
+            >
+              Serving delicious Indian, South Indian, Chinese, Rolls, Shakes and
+              Continental favourites in the heart of Gomti Nagar — freshly
+              prepared, hygienically served and thoughtfully priced.
             </p>
 
+            {/* CTAs */}
             <div
-              className="animate-fade-up mt-9 flex flex-wrap items-center gap-4"
-              style={{ animationDelay: "260ms" }}
+              className="animate-fade-up mt-9 flex flex-wrap items-center gap-3"
+              style={{ animationDelay: "320ms" }}
             >
               <Link
                 to="/menu"
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-7 py-4 text-sm font-semibold text-[oklch(0.18_0.02_180)] shadow-[var(--shadow-elegant)] transition-transform hover:scale-[1.03]"
+                className="group inline-flex items-center gap-2 rounded-full bg-[oklch(0.42_0.09_182)] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_10px_30px_-12px_oklch(0.42_0.09_182/0.6)] transition-all hover:-translate-y-0.5 hover:shadow-[0_16px_36px_-12px_oklch(0.42_0.09_182/0.7)]"
               >
                 View Menu
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Link>
               <a
                 href="tel:+919506844000"
-                className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/5 px-7 py-4 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/10"
+                className="inline-flex items-center gap-2 rounded-full border border-[oklch(0.42_0.09_182/0.35)] bg-white px-7 py-3.5 text-sm font-semibold text-[oklch(0.42_0.09_182)] transition-all hover:-translate-y-0.5 hover:border-[oklch(0.42_0.09_182)] hover:bg-[oklch(0.42_0.09_182/0.04)]"
               >
                 <Phone className="h-4 w-4" /> Call Now
               </a>
@@ -125,38 +141,53 @@ function Hero() {
                 href="https://wa.me/919506844000?text=Hi%20Food%20Haat%2C%20I%27d%20like%20to%20reserve%20a%20table."
                 target="_blank"
                 rel="noopener"
-                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[oklch(0.82_0.12_82)] to-[oklch(0.68_0.14_78)] px-7 py-4 text-sm font-semibold text-[oklch(0.18_0.02_180)] shadow-[var(--shadow-gold)] transition-transform hover:scale-[1.03]"
+                className="inline-flex items-center gap-2 rounded-full border border-[oklch(0.42_0.09_182/0.35)] bg-white px-7 py-3.5 text-sm font-semibold text-[oklch(0.42_0.09_182)] transition-all hover:-translate-y-0.5 hover:border-[oklch(0.42_0.09_182)] hover:bg-[oklch(0.42_0.09_182/0.04)]"
               >
                 Reserve a Table
               </a>
             </div>
 
+            {/* Stats */}
             <div
-              className="animate-fade-up mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-white/15 pt-6 text-white/80"
-              style={{ animationDelay: "360ms" }}
+              className="animate-fade-up mt-12 grid max-w-lg grid-cols-3 gap-6 border-t border-[oklch(0.42_0.09_182/0.15)] pt-6"
+              style={{ animationDelay: "400ms" }}
             >
-              <Stat k="4.7★" v="Rated by guests" />
-              <Stat k="₹200–400" v="Meal for two" />
-              <Stat k="11–11" v="Open daily" />
+              <StatLight k="4.7★" v="Rated by guests" />
+              <StatLight k="₹200–400" v="Meal for two" />
+              <StatLight k="11–11" v="Open daily" />
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="absolute inset-x-0 bottom-6 z-10 flex justify-center">
-        <div className="h-10 w-6 rounded-full border border-white/40 p-1">
-          <div className="mx-auto h-2 w-1 animate-bounce rounded-full bg-white/80" />
+        {/* RIGHT — Food photography */}
+        <div className="relative min-h-[60vh] overflow-hidden bg-[oklch(0.98_0.005_180)] lg:min-h-full">
+          <img
+            src={heroSpread}
+            alt="Signature pure-veg dishes at Food Haat — paneer tikka, biryani, noodles, rolls and dal makhani"
+            className="absolute inset-0 h-full w-full object-cover"
+            width={1408}
+            height={1600}
+          />
+          {/* Accent badge */}
+          <div className="absolute bottom-6 left-6 hidden rounded-2xl border border-white/70 bg-white/85 px-5 py-4 shadow-[0_20px_50px_-20px_rgba(15,118,110,0.3)] backdrop-blur-md sm:block">
+            <div className="text-[10px] font-semibold uppercase tracking-[0.28em] text-[oklch(0.42_0.09_182)]">
+              Chef's Table
+            </div>
+            <div className="mt-1 font-display text-lg text-[oklch(0.28_0.06_185)]">
+              Fresh · Hygienic · Pure Veg
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function Stat({ k, v }: { k: string; v: string }) {
+function StatLight({ k, v }: { k: string; v: string }) {
   return (
     <div>
-      <div className="font-display text-2xl text-white">{k}</div>
-      <div className="mt-1 text-xs uppercase tracking-widest text-white/60">{v}</div>
+      <div className="font-display text-2xl text-[oklch(0.42_0.09_182)]">{k}</div>
+      <div className="mt-1 text-[10px] uppercase tracking-widest text-[oklch(0.42_0.09_182/0.6)]">{v}</div>
     </div>
   );
 }
