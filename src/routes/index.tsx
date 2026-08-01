@@ -99,14 +99,21 @@ function Hero() {
 
             {/* Slogan with decorative lines */}
             <div
-              className="animate-fade-up mt-6 flex items-center gap-4"
+              className="animate-fade-up mt-6 flex flex-col items-center gap-2"
               style={{ animationDelay: "160ms" }}
             >
-              <span className="h-px w-8 bg-[oklch(0.52_0.09_180/0.4)]" />
-              <span className="text-xs font-semibold uppercase tracking-[0.42em] text-[oklch(0.42_0.09_182)] sm:text-sm">
-                Pure Veg <Leaf className="mx-1 inline h-3.5 w-3.5 text-[oklch(0.62_0.16_150)]" /> Pure Joy
-              </span>
-              <span className="h-px flex-1 bg-[oklch(0.52_0.09_180/0.4)]" />
+              {/* PURE VEG centred between lines */}
+              <div className="flex w-full items-center gap-4">
+                <span className="h-px flex-1 bg-[oklch(0.52_0.09_180/0.4)]" />
+                <span className="text-xs font-semibold uppercase tracking-[0.42em] text-[oklch(0.42_0.09_182)] sm:text-sm">
+                  Pure Veg
+                </span>
+                <span className="h-px flex-1 bg-[oklch(0.52_0.09_180/0.4)]" />
+              </div>
+              {/* Subtitle */}
+              <p className="text-[15px] font-medium uppercase tracking-[0.3em] text-[oklch(0.52_0.09_180/0.75)]">
+                Restaurant &amp; Caterers
+              </p>
             </div>
 
             {/* Description */}

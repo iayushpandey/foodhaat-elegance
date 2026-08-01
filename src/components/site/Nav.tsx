@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
-import logoAsset from "@/assets/foodhaat-logo.png.asset.json";
+const logoUrl = "/foodhaat-logo.png";
 
 export function Nav() {
   const scrolled = true;
@@ -17,11 +17,16 @@ export function Nav() {
       }`}
     >
       <div className="container-x mx-auto flex h-18 max-w-7xl items-center justify-between py-4">
-        <Link to="/" className="group flex items-center gap-3">
+        <Link to="/" className="group flex items-center gap-1">
           <img
-            src={logoAsset.url}
+            src={logoUrl}
             alt="Food Haat"
-            className="h-[2cm] w-[2cm] object-contain"
+            className="h-[2cm] w-[2cm] object-contain mix-blend-multiply"
+          />
+          <img
+            src="/foodhaat-text.png"
+            alt="Food Haat - Restaurant Catering Banquet"
+            className="h-[1.6cm] w-auto object-contain mix-blend-multiply"
           />
         </Link>
 
