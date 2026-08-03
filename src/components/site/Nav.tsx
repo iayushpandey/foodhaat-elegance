@@ -95,14 +95,8 @@ export function Nav() {
 
           <div className="hidden items-center gap-3 md:flex">
             <a
-              href="tel:+919506844000"
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[oklch(0.82_0.12_82)] to-[oklch(0.68_0.14_78)] px-5 py-2.5 text-sm font-semibold text-[oklch(0.18_0.02_180)] shadow-[var(--shadow-gold)] transition-transform hover:scale-[1.03]"
-            >
-              <Phone className="h-4 w-4" /> Call Now
-            </a>
-            <a
               href="tel:+917991575795"
-              className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-5 py-2.5 text-sm font-semibold text-primary shadow-sm transition-all hover:scale-[1.03] hover:bg-primary/20 hover:shadow-[0_4px_16px_-4px_oklch(0.47_0.09_180/0.4)]"
+              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[oklch(0.82_0.12_82)] to-[oklch(0.68_0.14_78)] px-5 py-2.5 text-sm font-semibold text-[oklch(0.18_0.02_180)] shadow-[var(--shadow-gold)] transition-transform hover:scale-[1.03]"
             >
               <Phone className="h-4 w-4" /> Home Delivery
             </a>
@@ -125,14 +119,8 @@ export function Nav() {
               <a href="#about" onClick={() => setOpen(false)} className="text-lg font-medium">About</a>
               <a href="#location" onClick={() => setOpen(false)} className="text-lg font-medium">Visit</a>
               <a
-                href="tel:+919506844000"
-                className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[oklch(0.82_0.12_82)] to-[oklch(0.68_0.14_78)] px-5 py-3 text-sm font-semibold text-[oklch(0.18_0.02_180)]"
-              >
-                <Phone className="h-4 w-4" /> Call Now — +91 9506 844 000
-              </a>
-              <a
                 href="tel:+917991575795"
-                className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-5 py-3 text-sm font-semibold text-primary"
+                className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[oklch(0.82_0.12_82)] to-[oklch(0.68_0.14_78)] px-5 py-3 text-sm font-semibold text-[oklch(0.18_0.02_180)]"
               >
                 <Phone className="h-4 w-4" /> Home Delivery — +91 79915 75795
               </a>
