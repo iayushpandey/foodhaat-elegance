@@ -29,7 +29,7 @@ export function Nav() {
       >
         <div className="container-x mx-auto flex h-18 max-w-7xl items-center justify-between py-4">
           {/* Logo — clickable to open Owner Modal */}
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 mix-blend-multiply">
             <motion.button
               type="button"
               onClick={() => setModalOpen(true)}
@@ -39,19 +39,21 @@ export function Nav() {
               whileTap={{ scale: 0.95 }}
               transition={{ type: "spring", stiffness: 400, damping: 20 }}
               className="focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 rounded-lg"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", background: "transparent", isolation: "auto" }}
             >
               <img
                 src={logoUrl}
                 alt="Food Haat"
-                className="h-[2cm] w-[2cm] object-contain mix-blend-multiply"
+                className="h-[2cm] w-[2cm] object-contain"
+                style={{ display: "block" }}
               />
             </motion.button>
             <Link to="/" className="group flex items-center">
               <img
                 src="/foodhaat-text.png"
                 alt="Food Haat - Restaurant Catering Banquet"
-                className="h-[1.6cm] w-auto object-contain mix-blend-multiply"
+                className="h-[1.6cm] w-auto object-contain"
+                style={{ display: "block" }}
               />
             </Link>
           </div>
@@ -93,10 +95,10 @@ export function Nav() {
 
           <div className="hidden items-center gap-3 md:flex">
             <a
-              href="tel:+919506844000"
+              href="tel:+917991575795"
               className="inline-flex items-center gap-2 rounded-full bg-gradient-to-br from-[oklch(0.82_0.12_82)] to-[oklch(0.68_0.14_78)] px-5 py-2.5 text-sm font-semibold text-[oklch(0.18_0.02_180)] shadow-[var(--shadow-gold)] transition-transform hover:scale-[1.03]"
             >
-              <Phone className="h-4 w-4" /> Call Now
+              <Phone className="h-4 w-4" /> Home Delivery
             </a>
           </div>
 
@@ -117,10 +119,10 @@ export function Nav() {
               <a href="#about" onClick={() => setOpen(false)} className="text-lg font-medium">About</a>
               <a href="#location" onClick={() => setOpen(false)} className="text-lg font-medium">Visit</a>
               <a
-                href="tel:+919506844000"
-                className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground"
+                href="tel:+917991575795"
+                className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full bg-gradient-to-br from-[oklch(0.82_0.12_82)] to-[oklch(0.68_0.14_78)] px-5 py-3 text-sm font-semibold text-[oklch(0.18_0.02_180)]"
               >
-                <Phone className="h-4 w-4" /> +91 9506 844 000
+                <Phone className="h-4 w-4" /> Home Delivery — +91 79915 75795
               </a>
             </div>
           </div>
